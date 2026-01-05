@@ -1,0 +1,11 @@
+export PS1="root@[chapter8]~# "
+export PATH=$PATH:/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin:/root/bin
+# Para que python estático encuentre sus recursos.
+export PYTHONHOME=/usr/local/
+export PYTHONPATH=$PYTHONHOME/lib/python3.11
+
+/usr/local/frida/frida-server-17.5.1-linux-x86_64 -l 0.0.0.0:54321 &
+
+echo "GREETINGS PROFESSOR FALKEN"
+echo "SHALL WE PLAY A GAME?"
+echo
