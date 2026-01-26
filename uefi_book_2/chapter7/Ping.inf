@@ -1,0 +1,32 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Ping
+  FILE_GUID                      = 88885678-1234-1234-1234-123456789ABC
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  Ping.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  BaseMemoryLib
+  MemoryAllocationLib
+
+[Protocols]
+  gEfiIp4ProtocolGuid
+  gEfiIp4Config2ProtocolGuid
+  gEfiIp4ServiceBindingProtocolGuid
+  gEfiTcp4ServiceBindingProtocolGuid
+  gEfiTcp4ProtocolGuid
+  gEfiShellParametersProtocolGuid
+  gEfiRngProtocolGuid
+
+[BuildOptions]

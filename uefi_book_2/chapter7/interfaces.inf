@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = interfaces
+  FILE_GUID                      = 77245678-7724-7724-7724-772456789ABC
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  interfaces.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  NetworkPkg/NetworkPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+
+[Protocols]
+  # Devices:
+  gEfiDevicePathToTextProtocolGuid
+  # Network:
+  gEfiSimpleNetworkProtocolGuid
+
+[Guids]
+
+[BuildOptions]
